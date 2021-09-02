@@ -1,9 +1,9 @@
 package com.bridgelabz.algorithms;
 
 public class MergeSort {
-	public static void merge(String words[], int start, int middle, int end)
+	public static <T extends Comparable<T>> void merge(T words[], int start, int middle, int end)
     {
-		String temp[] = new String[end - start + 1];
+		T temp[] = (T[]) new Object[end - start + 1];
 		int i = start, j = middle+1, k = 0;
 
 		while(i <= middle && j <= end) {
@@ -34,7 +34,7 @@ public class MergeSort {
 		}
     }
 
-    public static void mergeSort(String words[], int start, int end)
+    public static <T extends Comparable<T>> void mergeSort(T words[], int start, int end)
     {
         if (start < end) {
             int middle =start+ (end-start)/2;
@@ -46,7 +46,7 @@ public class MergeSort {
         }
     }
  
-    public static void printArray(String words[])
+    public static <T> void printArray(T words[])
     {
         for (int index = 0; index < words.length; index++) {
             System.out.print(words[index] + " ");
