@@ -2,10 +2,8 @@ package com.bridgelabz.algorithms;
 
 import java.util.*;
 
-public class BinarySearch {
-	static String[] words="apple ball cat dog elephant".split(" ");
-	
-	public static boolean binarySearch(String key) {
+public class BinarySearch {	
+	public static <T extends Comparable<T>> boolean binarySearch(T key, T[] words) {
 		int length=words.length;
 		int low=0;
 		int high=length-1,middle=0;
@@ -29,11 +27,12 @@ public class BinarySearch {
 	}
 
 	public static void main(String[] args) {
+		String[] words="apple ball cat dog elephant".split(" ");
 		Scanner scanner=new Scanner(System.in);
 		System.out.println("Enter word to be searched");
 		String key=scanner.nextLine();
 		scanner.close();
-		boolean isKeyFound=binarySearch(key);
+		boolean isKeyFound=binarySearch(key,words);
 		if(isKeyFound)
 			System.out.println("Found");
 		else
