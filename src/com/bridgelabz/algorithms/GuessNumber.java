@@ -24,9 +24,10 @@ public class GuessNumber {
 		if(start==end) {
 			return start;
 		}
-		System.out.println("Is your number between "+(start)+" and "+((start+end)/2));
-		int response = scanner.nextInt();
 		int mid = (start+end)/2;
+		System.out.println("Is your number between "+(start)+" and "+(mid));
+		int response = scanner.nextInt();
+		
 		switch(response) {
 		case 1: return guessNumber(start,mid);
 		case 0: return guessNumber(mid+1,end);
