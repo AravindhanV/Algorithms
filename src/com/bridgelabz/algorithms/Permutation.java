@@ -9,14 +9,14 @@ public class Permutation {
 		letters[second] = temp;
 	}
 
-	private static void findPermutationsRecursive(char[] chars, int currentIndex) {
+	private static void findPermutations(char[] chars, int currentIndex) {
 		if (currentIndex == chars.length - 1) {
 			System.out.println(String.valueOf(chars));
 		}
 
 		for (int i = currentIndex; i < chars.length; i++) {
 			swap(chars, currentIndex, i);
-			findPermutationsRecursive(chars, currentIndex + 1);
+			findPermutations(chars, currentIndex + 1);
 			swap(chars, currentIndex, i);
 		}
 	}
@@ -29,6 +29,6 @@ public class Permutation {
 		char[] letters = word.toCharArray();
 		scanner.close();
 		
-		findPermutationsRecursive(letters,0);
+		findPermutations(letters,0);
 	}
 }
