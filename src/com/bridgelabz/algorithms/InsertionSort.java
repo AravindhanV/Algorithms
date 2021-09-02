@@ -2,9 +2,9 @@ package com.bridgelabz.algorithms;
 
 public class InsertionSort {
 
-	public static void insertionSort(String[] array) {
+	public static <T extends Comparable<T>> void insertionSort(T[] array) {
 		for (int currentIndex = 1; currentIndex < array.length; currentIndex++) {
-			String key = array[currentIndex];
+			T key = array[currentIndex];
 			int movingPointer = currentIndex - 1;
 			while (movingPointer >= 0 && array[movingPointer].compareTo(key) > 0) {
 				array[movingPointer + 1] = array[movingPointer];
@@ -17,8 +17,8 @@ public class InsertionSort {
 
 	}
 
-	public static void printArray(String[] array) {
-		for (String word : array) {
+	public static <T> void printArray(T[] array) {
+		for (T word : array) {
 			System.out.print(word + " ");
 		}
 
