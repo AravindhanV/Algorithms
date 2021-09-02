@@ -1,7 +1,7 @@
 package com.bridgelabz.algorithms;
 
 public class BubbleSort {
-	static void bubbleSort(int array[]) {
+	public static void bubbleSort(int array[]) {
 		int length = array.length;
 		for (int i = 0; i < length - 1; i++) {
 			for (int j = 0; j < length - i - 1; j++) {
@@ -16,7 +16,7 @@ public class BubbleSort {
 		printArray(array);
 	}
 
-	static void printArray(int arr[]) {
+	public static void printArray(int arr[]) {
 		int n = arr.length;
 		for (int i = 0; i < n; ++i)
 			System.out.print(arr[i] + " ");

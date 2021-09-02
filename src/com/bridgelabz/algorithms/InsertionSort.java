@@ -2,7 +2,7 @@ package com.bridgelabz.algorithms;
 
 public class InsertionSort {
 
-	static void insertionSort(String[] array) {
+	public static void insertionSort(String[] array) {
 		for (int currentIndex = 1; currentIndex < array.length; currentIndex++) {
 			String key = array[currentIndex];
 			int movingPointer = currentIndex - 1;
@@ -17,7 +17,7 @@ public class InsertionSort {
 
 	}
 
-	static void printArray(String[] array) {
+	public static void printArray(String[] array) {
 		for (String word : array) {
 			System.out.print(word + " ");
 		}
